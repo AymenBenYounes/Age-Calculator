@@ -110,13 +110,13 @@ function App() {
           <span className="text-Light_red text-xs md:text-md lg:text-large italic font-medium text-sm pt-2">{errorDay}</span>
         </div>
         <div className="flex flex-col w-mobileThree">
-          <label className={`pb-2 tracking-space font-bold ${errorMonth ? "text-Light_red" : "text-Smokey_grey"} ${errorDate ? "text-Light_red" : "text-Smokey_grey"} text-sm`}>MONTH</label>
-          <input className={`border-1 border ${errorMonth ? "border-Light_red" : ''} ${errorDate ? "border-Light_red" : ""} hover:border-Purple font-bold text-xl cursor-pointer text-Off_black border-Light_grey rounded-md w-11/12 md:w-10/12 p-3 w-max-inputMax placeholder:text-Smokey_grey`} placeholder='MM' type="number" value={month} onChange={handleMonth} />
+          <label className={`pb-2 tracking-space font-bold ${errorMonth || errorDate ? "text-Light_red" : "text-Smokey_grey"} text-sm`}>MONTH</label>
+          <input className={`border-1 border ${errorMonth || errorDate ? "border-Light_red" : ""} hover:border-Purple font-bold text-xl cursor-pointer text-Off_black border-Light_grey rounded-md w-11/12 md:w-10/12 p-3 w-max-inputMax placeholder:text-Smokey_grey`} placeholder='MM' type="number" value={month} onChange={handleMonth} />
           <span className="text-Light_red text-xs md:text-md lg:text-large italic font-medium text-sm pt-2">{errorMonth}</span>
         </div>
         <div className="flex flex-col w-mobileThree">
-          <label className={`pb-2 tracking-space font-bold ${errorYear ? "text-Light_red" : "text-Smokey_grey"} ${errorDate ? "text-Light_red" : "text-Smokey_grey"} text-sm`}>YEAR</label>
-          <input className={`border-1 border ${errorYear ? "border-Light_red" : ''} ${errorDate ? "border-Light_red" : ""} hover:border-Purple font-bold text-xl cursor-pointer text-Off_black border-Light_grey rounded-md w-11/12 md:w-10/12 p-3 w-max-inputMax placeholder:text-Smokey_grey`} placeholder='YYYY' type="number" value={year} onChange={handleYear} />
+          <label className={`pb-2 tracking-space font-bold ${errorYear || errorDate ? "text-Light_red" : "text-Smokey_grey"} text-sm`}>YEAR</label>
+          <input className={`border-1 border ${errorYear || errorDate ? "border-Light_red" : ""} hover:border-Purple font-bold text-xl cursor-pointer text-Off_black border-Light_grey rounded-md w-11/12 md:w-10/12 p-3 w-max-inputMax placeholder:text-Smokey_grey`} placeholder='YYYY' type="number" value={year} onChange={handleYear} />
           <span className="text-Light_red text-xs md:text-md lg:text-large italic font-medium text-sm pt-2">{errorYear}</span>
         </div>
       </div>
